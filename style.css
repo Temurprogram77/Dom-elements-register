@@ -1,0 +1,54 @@
+body {
+  background-image: url(/background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  width: 400px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  /* background: #000; */
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+}
+h2 {
+  font-size: 3rem;
+}
+label {
+  font-size: 20px;
+  margin: 10px 0 6px 0;
+}
+input {
+  width: 270px;
+  height: 23px;
+  border-radius: 10px;
+  color: #858585;
+  border: none;
+  outline: none;
+  padding: 2px 12px;
+  background: #ffffff68;
+  border: 2px solid #ffffff68;
+}
+button {
+  margin-top: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 295px;
+  border-radius: 10px;
+  border: none;
+  background: #12620063;
+  color: white;
+}
+button:active {
+  background: #1262009a;
+}
