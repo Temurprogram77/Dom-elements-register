@@ -33,7 +33,7 @@ btn.addEventListener("click", (e) => {
       password.value = "";
       replacePassword.value = "";
     } else {
-      alert("Malumotlar qabul qilinmadi😒");
+      alert("Malumotlar qabul qilinmadi😒. ILtimos qayta urinib ko'ring !");
     }
   }
 });
