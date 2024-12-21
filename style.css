@@ -52,3 +52,7 @@ button {
 button:active {
   background: #1262009a;
 }
+
+@media screen and (max-width: 600px) {
+    
+}
