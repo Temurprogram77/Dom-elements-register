@@ -24,14 +24,14 @@ btn.addEventListener("click", (e) => {
     if (
       emailRegEx.test(emailValue) &&
       passwordRegEx.test(passwordValue) &&
-      passworddValue.value == password.value
+      nameRegEx.test(nameValue) &&
+      passworddValue == password
     ) {
       alert("Malumotlar qabul qilindi😊. Malumot uchun rahmat.👌");
-      userName.value = "";
-      surName.value = "";
+      username.value = "";
       email.value = "";
       password.value = "";
-      replacePassword.value = "";
+      passwordd.value = "";
     } else {
       alert("Malumotlar qabul qilinmadi😒. ILtimos qayta urinib ko'ring !");
     }
