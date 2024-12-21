@@ -54,5 +54,14 @@ button:active {
 }
 
 @media screen and (max-width: 600px) {
-    
+    input {
+        width: 100%;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    label {
+        font-size: 18px;
+        font-weight: 700;
+    }
 }
