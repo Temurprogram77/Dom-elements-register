@@ -38,6 +38,11 @@ btn.addEventListener("click", (e) => {
         alert(`Salom ${arr[0]} ! Xush kelibsiz !`);
       }, 200);
 
+      let map = "account.html";
+
+      setTimeout(() => {
+        window.location.href = map;
+      }, 300);
       username.value = "";
       email.value = "";
       password.value = "";
@@ -60,3 +65,4 @@ btn.addEventListener("click", (e) => {
     }
   }
 });
+
