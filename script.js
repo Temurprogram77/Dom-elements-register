@@ -31,6 +31,13 @@ btn.addEventListener("click", (e) => {
       email.value = "";
       password.value = "";
       passwordd.value = "";
+      inp2.style.border = "2px solid ";
+      inp2.style.border = "2px solid ";
+      inp2.style.border = "2px solid ";
+      inp2.style.border = "2px solid ";
+    }
+    else if (!emailRegEx.test(emailValue)) {
+        inp2.style.border = "2px solid red";
     } else {
       alert("Malumotlar qabul qilinmadi😒. ILtimos qayta urinib ko'ring !");
     }
