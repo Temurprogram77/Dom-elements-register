@@ -24,8 +24,7 @@ btn.addEventListener("click", (e) => {
     if (
       emailRegEx.test(emailValue) &&
       passwordRegEx.test(passwordValue) &&
-      nameRegEx.test(nameValue) &&
-      passworddValue == password
+      nameRegEx.test(nameValue)
     ) {
       alert("Malumotlar qabul qilindi😊. Malumot uchun rahmat.👌");
       username.value = "";
