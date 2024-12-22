@@ -14,30 +14,47 @@ btn.addEventListener("click", (e) => {
   let passwordRegEx = /^[0-9]{8,12}$/;
   let nameRegEx = /[a-zA-Z]/;
   let emailValue = email.value;
-  let passwordValue = password.value;
-  let passworddValue = passwordd.value;
+  let passwordValue = Number(password.value);
+  let passworddValue = Number(passwordd.value);
   let nameValue = username.value;
 
   if (emailValue == "" || passwordValue == "" || nameValue == "") {
-    alert("Avval to'ldiring");
+    alert("⚠️⚠️ Avval malumotlarni to'liq yozing ⚠️⚠️");
   } else {
     if (
       emailRegEx.test(emailValue) &&
       passwordRegEx.test(passwordValue) &&
-      nameRegEx.test(nameValue)
+      nameRegEx.test(nameValue) &&
+      passwordValue === passworddValue
     ) {
-      alert("Malumotlar qabul qilindi😊. Malumot uchun rahmat.👌");
+      setTimeout(() => {
+        alert("Malumotlar qabul qilindi😊. Malumot uchun rahmat.👌");
+      }, 100);
+
+      let arr = [username.value, email.value, password.value, passwordd.value];
+      console.log(arr);
+
+      setTimeout(() => {
+        alert(`Salom ${arr[0]} ! Xush kelibsiz !`);
+      }, 200);
+
       username.value = "";
       email.value = "";
       password.value = "";
       passwordd.value = "";
-      inp2.style.border = "2px solid ";
-      inp2.style.border = "2px solid ";
-      inp2.style.border = "2px solid ";
-      inp2.style.border = "2px solid ";
-    }
-    else if (!emailRegEx.test(emailValue)) {
-        inp2.style.border = "2px solid red";
+      inp1.style.border = "2px solid #ffffff68";
+      inp2.style.border = "2px solid #ffffff68";
+      inp3.style.border = "2px solid #ffffff68";
+      inp4.style.border = "2px solid #ffffff68";
+    } else if (!nameRegEx.test(nameValue)) {
+      inp1.style.border = "2px solid red";
+    } else if (!emailRegEx.test(emailValue)) {
+      inp2.style.border = "2px solid red";
+    } else if (!passwordRegEx.test(passwordValue)) {
+      inp3.style.border = "2px solid red";
+    } else if (!passwordValue == !passworddValue) {
+      inp4.style.border = "2px solid red";
+      console.log("Invalid password");
     } else {
       alert("Malumotlar qabul qilinmadi😒. ILtimos qayta urinib ko'ring !");
     }
