@@ -43,6 +43,10 @@ btn.addEventListener("click", (e) => {
       setTimeout(() => {
         window.location.href = map;
       }, 300);
+
+      let l =  document.querySelector(".text");
+      console.log(l);
+
       username.value = "";
       email.value = "";
       password.value = "";
@@ -65,4 +69,3 @@ btn.addEventListener("click", (e) => {
     }
   }
 });
-
