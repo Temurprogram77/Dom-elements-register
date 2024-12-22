@@ -7,7 +7,7 @@ let inp1 = document.querySelector(".inp1");
 let inp2 = document.querySelector(".inp2");
 let inp3 = document.querySelector(".inp3");
 let inp4 = document.querySelector(".inp4");
-
+let arr = [];
 btn.addEventListener("click", (e) => {
   e.preventDefault();
   let emailRegEx = /[a-z0-9]{6,12}@gmail/;
@@ -31,7 +31,7 @@ btn.addEventListener("click", (e) => {
         alert("Malumotlar qabul qilindi😊. Malumot uchun rahmat.👌");
       }, 100);
 
-      let arr = [username.value, email.value, password.value, passwordd.value];
+      arr = [username.value, email.value, password.value, passwordd.value];
       console.log(arr);
 
       setTimeout(() => {
