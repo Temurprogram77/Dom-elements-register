@@ -45,7 +45,7 @@ btn.addEventListener("click", (e) => {
       }, 300);
 
       let l =  document.querySelector(".text");
-      console.log(l);
+    //   console.log(l);
 
       username.value = "";
       email.value = "";
@@ -69,3 +69,10 @@ btn.addEventListener("click", (e) => {
     }
   }
 });
+
+console.log(arr[0]);
+
+function accountFunc(a) {
+    
+}
+accountFunc(arr[0]);
