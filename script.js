@@ -7,6 +7,11 @@ let inp1 = document.querySelector(".inp1");
 let inp2 = document.querySelector(".inp2");
 let inp3 = document.querySelector(".inp3");
 let inp4 = document.querySelector(".inp4");
+let pass = document.querySelectorAll("#pass");
+let wrong1 = document.querySelector(".wrog_text1");
+let wrong2 = document.querySelector(".wrog_text2");
+let wrong3 = document.querySelector(".wrog_text3");
+let wrong4 = document.querySelector(".wrog_text4");
 let arr = [];
 btn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -19,7 +24,10 @@ btn.addEventListener("click", (e) => {
   let nameValue = username.value;
 
   if (emailValue == "" || passwordValue == "" || nameValue == "") {
-    alert("⚠️⚠️ Avval malumotlarni to'liq yozing ⚠️⚠️");
+    for (let i = 0; i < pass.length; i++) {
+      pass.style.border = "2px solid red";
+    //   console.log(i);
+    }
   } else {
     if (
       emailRegEx.test(emailValue) &&
@@ -44,8 +52,8 @@ btn.addEventListener("click", (e) => {
         window.location.href = map;
       }, 300);
 
-      let l =  document.querySelector(".text");
-    //   console.log(l);
+      let l = document.querySelector(".text");
+      //   console.log(l);
 
       username.value = "";
       email.value = "";
@@ -58,21 +66,27 @@ btn.addEventListener("click", (e) => {
     } else if (!nameRegEx.test(nameValue)) {
       inp1.style.border = "2px solid red";
     } else if (!emailRegEx.test(emailValue)) {
-      inp2.style.border = "2px solid red";
+      setTimeout(() => {
+        inp2.style.border = "2px solid red";
+        wrong2.textContent = "Iltimos emailingizni to'g'ri kiriting!";
+      }, 2000);
     } else if (!passwordRegEx.test(passwordValue)) {
-      inp3.style.border = "2px solid red";
+      setTimeout(() => {
+        inp3.style.border = "2px solid red";
+        wrong3.textContent =
+          "Iltimos parolingizni (8-12 ta raqam) ko'rinishida kiriting!";
+      }, 2000);
     } else if (!passwordValue == !passworddValue) {
-      inp4.style.border = "2px solid red";
+      setTimeout(() => {
+        inp4.style.border = "2px solid red";
+        wrong4.textContent = "Parolingiz bo'yicha to'g'ri kelmayapti!";
+      }, 2000);
       console.log("Invalid password");
-    } else {
-      alert("Malumotlar qabul qilinmadi😒. ILtimos qayta urinib ko'ring !");
     }
   }
 });
 
 console.log(arr[0]);
 
-function accountFunc(a) {
-    
-}
+function accountFunc(a) {}
 accountFunc(arr[0]);

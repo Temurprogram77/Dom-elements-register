@@ -52,6 +52,10 @@ button {
 button:active {
   background: #1262009a;
 }
+.text {
+  font-size: 12px;
+  color: red;
+}
 
 @media screen and (max-width: 600px) {
   input {
