@@ -85,6 +85,3 @@ btn.addEventListener("click", (e) => {
 });
 
 console.log(arr[0]);
-
-function accountFunc(a) {}
-accountFunc(arr[0]);
